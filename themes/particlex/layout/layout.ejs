@@ -1,0 +1,108 @@
+<%
+    let type = "post";
+    if (is_home()) type = "index";
+    if (is_post() || is_page()) type = "post";
+    if (is_category() || page.type === "categories") type = "categories";
+    if (is_tag() || page.type === "tags") type = "tags";
+    if (is_archive()) type = "archives";
+    let title = page.title + " | " + config.title;
+    if (is_home()) title = config.title;
+    if (is_post() || is_page()) title = page.title + " | " + config.title;
+    if (is_category()) title = "Categories: " + page.category + " | " + config.title;
+    if (is_tag()) title = "Tags: " + page.tag + " | " + config.title;
+    if (is_archive()) title = "Archives | " + config.title;
+%>
+<!DOCTYPE html>
+<html lang="<%- config.language %>">
+<head>
+    <meta charset="utf-8" />
+    <title><%= title %></title>
+    <meta name="author" content="<%- config.author %>" />
+    <meta name="description" content="<%- config.description %>" />
+    <meta name="keywords" content="<%- config.keywords %>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/images/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/images/favicon-128.png" sizes="128x128">
+    <link rel="icon" type="image/png" href="/images/favicon-196x196.png" sizes="196x196">
+    <link rel="icon" type="image/png" href="/images/favicon.png" sizes="353x353">
+    <link rel="stylesheet" type="text/css" href="/css/loading.css">
+    <%- partial("import", { type }) %>
+</head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div class="cat">
+                    <div class="cat__body"></div>
+                    <div class="cat__body"></div>
+                    <div class="cat__tail"></div>
+                    <div class="cat__head"></div>
+                </div>
+            </div>
+        </transition>
+        <%- partial("menu") %>
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <%- partial(type) %>
+            <%- partial("footer") %>
+        </div>
+        <% if (theme.preview.enable) { %>
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        <% } %>
+    </div>
+<script>
+const app = Vue.createApp({
+    mixins: Object.values(mixins),
+    data() {
+        return {
+            loading: true,
+            hiddenMenu: false,
+            showMenuItems: false,
+            menuColor: false,
+            scrollTop: 0,
+            renderers: [],
+        };
+    },
+    created() {
+        window.addEventListener("load", () => {
+            this.loading = false;
+        });
+    },
+    mounted() {
+        window.addEventListener("scroll", this.handleScroll, true);
+        this.render();
+    },
+    methods: {
+        render() {
+            for (let i of this.renderers) i();
+        },
+        handleScroll() {
+            let wrap = this.$refs.homePostsWrap;
+            let newScrollTop = document.documentElement.scrollTop;
+            if (this.scrollTop < newScrollTop) {
+                this.hiddenMenu = true;
+                this.showMenuItems = false;
+            } else this.hiddenMenu = false;
+            if (wrap) {
+                if (newScrollTop <= window.innerHeight - 100) this.menuColor = true;
+                else this.menuColor = false;
+                if (newScrollTop <= 400) wrap.style.top = "-" + newScrollTop / 5 + "px";
+                else wrap.style.top = "-80px";
+            }
+            this.scrollTop = newScrollTop;
+        },
+    },
+});
+app.mount("#layout");
+</script>
+    <% if (type === "post" && page.comments) { %>
+    <%- partial("comment") %>
+    <% } %>
+</body>
+</html>
