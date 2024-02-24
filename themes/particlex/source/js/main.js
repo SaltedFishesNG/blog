@@ -1,5 +1,4 @@
-setTimeout(function () { document.getElementById('loading').style.display = 'none' }, 30000);
-
+setTimeout((function () { document.getElementById("loading").style.display = "none" }), 3e4);
 const app = Vue.createApp({
     mixins: Object.values(mixins),
     data() {
@@ -13,7 +12,17 @@ const app = Vue.createApp({
         };
     },
     created() { window.addEventListener("load", () => { setTimeout(() => { this.loading = false; }, 500); }); },
-    mounted() { window.addEventListener("scroll", this.handleScroll, true); this.render(); },
+    mounted() {
+        window.addEventListener("scroll", this.handleScroll, true);
+        this.render();
+        document.querySelectorAll('a').forEach((link) => {
+            link.addEventListener('click', () => {
+                let href = link.getAttribute('href');
+                let siteDomain = window.location.hostname;
+                if (href.startsWith('/') || href.includes(siteDomain)) { this.loading = true; }
+            });
+        });
+    },
     methods: {
         render() {
             for (let i of this.renderers) i();

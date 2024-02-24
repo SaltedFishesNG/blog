@@ -84,7 +84,6 @@ pagination_dir: page
 # Include / Exclude file(s)
 ## include:/exclude: options only apply to the 'source/' folder
 include:
-  - ".well-known/*"
 exclude:
 ignore:
 
@@ -99,46 +98,49 @@ deploy:
   type: ''
 
 archive_generator:
-    enabled: true
-    per_page: 0
-    yearly: false
-    monthly: false
-    daily: false
+  enabled: true
+  per_page: 0
+  yearly: false
+  monthly: false
+  daily: false
 
 filter_optimize:
   enable: true
-  # static resource versioning
   versioning: false
   css:
-    # minify all css files
     minify: true
     excludes:
-    # use preload to load css elements dynamically
     delivery:
       - '@fortawesome/fontawesome-free'
       - 'fonts.googleapis.com'
-    # make specific css content inline into the html page
     inlines:
-      # support full path only
       - css/main.css
       - css/loading.css
   js:
-    # minify all js files
     minify: true
     excludes:
-    # remove the comments in each of the js files
     remove_comments: false
   html:
-    # minify all html files
     minify: false
     excludes:
   # set the priority of this plugin,
   # lower means it will be executed first, default of Hexo is 10
-  priority: 13
+  priority: 12
+
+html_minifier:
+    collapseBooleanAttributes: true
+    collapseWhitespace: true
+    ignoreCustomComments: [!!js/regexp /^\s*more/]
+    removeComments: true
+    removeEmptyAttributes: true
+    removeScriptTypeAttributes: true
+    removeStyleLinkTypeAttributes: true
+    minifyJS: true
+    minifyCSS: true
 
 # offline config passed to sw-precache.
 service_worker:
-  maximumFileSizeToCacheInBytes: 5242880
+  maximumFileSizeToCacheInBytes: 1048576
   staticFileGlobs:
   - public/**/*.{json,js,html,css,png,webp,ico,gif,svg,eot,ttf,woff,woff2}
 #  - pbulic/**/*.{jpg}
