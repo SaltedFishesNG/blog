@@ -1,4 +1,3 @@
-setTimeout((function () { document.getElementById("loading").style.display = "none" }), 3e4);
 const app = Vue.createApp({
     mixins: Object.values(mixins),
     data() {

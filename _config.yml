@@ -142,7 +142,9 @@ html_minifier:
 service_worker:
   maximumFileSizeToCacheInBytes: 1048576
   staticFileGlobs:
-  - public/**/*.{json,js,html,css,png,webp,ico,gif,svg,eot,ttf,woff,woff2}
+  - public/**/*.{js,html,css}
+  - public/**/*.{eot,ttf,woff,woff2}
+  - public/**/*.{png,webp,ico,gif,svg}
 #  - pbulic/**/*.{jpg}
   stripPrefix: public
   verbose: true

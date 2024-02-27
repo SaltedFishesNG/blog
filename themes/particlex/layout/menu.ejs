@@ -16,7 +16,7 @@
             <span>&emsp;<%= config.title.toUpperCase() %></span>
         </div>
         <transition name="slide">
-            <div class="items" v-show="showMenuItems">
+            <div class="items" v-show="showMenuItems" style="display: none;">
                 <% Object.entries(theme.menu).forEach(([key, value]) => { %>
                 <a href="<%- url_for(value.link) %>">
                     <div class="item">
@@ -32,5 +32,5 @@
     </nav>
 </div>
 <transition name="fade">
-    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems" style="display: none;"></div>
 </transition>

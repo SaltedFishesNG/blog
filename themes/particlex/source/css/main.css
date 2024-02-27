@@ -346,13 +346,13 @@
     height: 50px;
 }
 #menu #desktop-menu .title {
-    color: #555;
+    color: #333;
     display: inline-block;
     margin-left: 60px;
     margin-right: 5px;
 }
 #menu #desktop-menu a {
-    color: #555;
+    color: #333;
     display: inline-block;
     margin-left: 30px;
 }
@@ -372,10 +372,10 @@
     width: 80%;
 }
 #menu #mobile-menu .items a {
-    color: #555;
+    color: #333;
 }
 #menu #mobile-menu .title {
-    color: #555;
+    color: #333;
     cursor: pointer;
     z-index: 1003;
 }
