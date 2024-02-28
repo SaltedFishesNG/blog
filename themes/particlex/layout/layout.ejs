@@ -40,8 +40,8 @@
             </div>
         </div>
         <script>
-            if (typeof Proxy == 'undefined') { document.getElementById("loading").style.display = "none" };
-            setTimeout((function () { document.getElementById("loading").style.display = "none" }), 15e3);
+            setTimeout((function () { document.getElementById("loading").style.display = "none" }), 1e4);
+            if (typeof Proxy == 'undefined') { document.getElementById("loading").style.display = "none" }
         </script>
         <%- partial("menu") %>
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">

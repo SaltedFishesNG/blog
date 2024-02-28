@@ -97,7 +97,7 @@ Add-AppPackage -Path "这里填写安装包的名称和路径" -AllowUnsigned
 <details>
   <summary>不会PowerShell？</summary><blockquote>
   使用win+R键，输入<code>PowerShell</code>然后回车，输入如上指令，然后回车
-  <br><img src="./win32-to-MSIX/5.webp" alt="UI上与您的实际情况可能不太一样，实际上用起来是一样的"><br>
+  <br><img src="https://saltedfishes.com/win32-to-MSIX/5.webp" alt="UI上与您的实际情况可能不太一样，实际上用起来是一样的"><br>
 </blockquote></details><br>
 
 ---
