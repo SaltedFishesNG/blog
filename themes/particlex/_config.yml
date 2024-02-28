@@ -108,6 +108,7 @@ polyfill:
 highlight:
     enable: true
     style: github
+    darkstyle: github-dark
 
 # KaTeX math rendering
 math:
