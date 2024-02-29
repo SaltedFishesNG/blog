@@ -21,7 +21,8 @@
     <meta name="description" content="<%- config.description %>" />
     <meta name="keywords" content="<%- config.keywords %>" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#92cafa">
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#92cafa" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#054072" />
     <link rel="manifest" href="/manifest.json">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="icon" type="image/png" href="/images/favicon.png" sizes="512x512">
@@ -40,7 +41,10 @@
             </div>
         </div>
         <script>
-            setTimeout((function () { document.getElementById("loading").style.display = "none" }), 1e4);
+            setTimeout((function () {
+                document.getElementById("loading").style.display = "none";
+                document.getElementById("loading").style.width = "100vw";
+            }), 7111);
             if (typeof Proxy == 'undefined') { document.getElementById("loading").style.display = "none" }
         </script>
         <%- partial("menu") %>
