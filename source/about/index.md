@@ -37,7 +37,6 @@ layout: about
 
 | 站点 | 账号 |
 | :--------  | :----- |
-| Matrix | [@saltedfishes:mozilla.org](https://matrix.to/#/@saltedfishes:mozilla.org/) |
 | Mail | [main@saltedfishes.com](mailto:main@saltedfishes.com) |
 | Twitter | [@SaltedFishesNG](https://twitter.com/SaltedFishesNG) |
 | GitHub | [SaltedFishesNG](https://github.com/SaltedFishesNG/) |

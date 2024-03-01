@@ -65,10 +65,6 @@ card:
     description: |
         「尽己所能见证一切有趣之事」
     iconLinks:
-        Matrix:
-            name: comments
-            theme: solid
-            link: https://matrix.to/#/@saltedfishes:mozilla.org/
         mail:
             name: envelope
             theme: solid

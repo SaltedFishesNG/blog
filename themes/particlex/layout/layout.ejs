@@ -27,7 +27,6 @@
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="icon" type="image/png" href="/images/favicon.png" sizes="512x512">
     <link rel="icon" type="image/webp" href="/images/favicon.webp" sizes="2048x2048">
-    <link rel="stylesheet" href="/css/loading.css"/>
     <%- partial("import", { type }) %>
 </head>
 <body>
@@ -41,10 +40,8 @@
             </div>
         </div>
         <script>
-            setTimeout((function () {
-                document.getElementById("loading").style.display = "none";
-                document.getElementById("loading").style.width = "100vw";
-            }), 7111);
+            hideloading.setAttribute("disabled", "");
+            setTimeout((function () { document.getElementById("loading").style.display = "none"; }), 7e3);
             if (typeof Proxy == 'undefined') { document.getElementById("loading").style.display = "none" }
         </script>
         <%- partial("menu") %>
