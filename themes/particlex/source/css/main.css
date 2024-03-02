@@ -914,7 +914,8 @@ ol li {
 }
 @media (prefers-color-scheme: dark) {
     *,
-    #home-card #card-div .friend-links a{
+    #home-card #card-div .friend-links a,
+    #home-posts .post .category-and-date .category a{
         color: #cbc6bf;
     }
     #menu.menu-color *{
