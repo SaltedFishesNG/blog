@@ -30,6 +30,7 @@
     <%- partial("import", { type }) %>
 </head>
 <body>
+    <script>hideloading.setAttribute("disabled", "");</script>
     <div id="layout">
         <div id="loading" v-show="loading">
             <div class="cat">
@@ -40,7 +41,6 @@
             </div>
         </div>
         <script>
-            hideloading.setAttribute("disabled", "");
             setTimeout((function () { document.getElementById("loading").style.display = "none"; }), 7e3);
             if (typeof Proxy == 'undefined') { document.getElementById("loading").style.display = "none" }
         </script>
