@@ -41,6 +41,13 @@ layout: about
 | Twitter | [@SaltedFishesNG](https://twitter.com/SaltedFishesNG) |
 | GitHub | [SaltedFishesNG](https://github.com/SaltedFishesNG/) |
 
+## 🔑 GnuPG公钥
+
+* [OpenPGP](https://keys.openpgp.org/vks/v1/by-fingerprint/0F3659EAC9207CE3B0D7C5ABA4CA90D326E9FB7C)
+```
+Fingerprint = 0F36 59EA C920 7CE3 B0D7 C5AB A4CA 90D3 26E9 FB7C
+```
+
 ## 🌐 关于本站
 * 本站使用的第一个域名注册于 2022-10-17。
 * <details><summary><del>2022年那一年我用域名干什么了？</del></summary>
