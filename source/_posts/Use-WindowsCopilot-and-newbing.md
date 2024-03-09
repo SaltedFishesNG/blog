@@ -6,8 +6,8 @@ tag:
 categories: Windows
 excerpt: 本文介绍了如何正确使用Windows Copilot和Bing AI，以及遇到的问题和解决方法。
 date: 2023-09-29
-updated: 2023-11-18 
-# pinned: 
+updated: 2023-11-18
+# pinned:
 comments: true
 # secret: ""
 ---
@@ -53,7 +53,7 @@ comments: true
 或者是使用 win + c 键来打开它。
 
 如果你仍未解决此问题，请手动安装kb5027397启用包，以启用Windows Copilot。
-下载kb5027397启用包: [点击这里](https://cloud.saltedfishes.com/zh-CN/%E6%9D%82%E7%89%A9/%E5%90%AF%E7%94%A8WindowsCopilot/)
+下载kb5027397启用包: [点击这里](https://cloud.saltedfishes.com/zh-CN/杂物/启用WindowsCopilot) 或者 [点击这里](https://alist.saltedfishes.com/E5-Main/杂物/启用WindowsCopilot)
 
 ## 0x04 注意事项
 

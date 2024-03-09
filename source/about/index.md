@@ -58,4 +58,5 @@ Fingerprint = 0F36 59EA C920 7CE3 B0D7 C5AB A4CA 90D3 26E9 FB7C
 * 本站所有内容仅允许非商用相同方式转载，允许在主题不变的情况下对内容进行修改，对于转载后的相关事项概不负责。
 
 ## 以及.....
-* [我的OneDrive盘](https://cloud.saltedfishes.com/)
+* [SaltedFishes's OneDrive](https://cloud.saltedfishes.com/)
+* [SaltedFishes's Box](https://alist.saltedfishes.com/)
