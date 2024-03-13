@@ -92,13 +92,6 @@ footer:
         code:
         link:
 
-# Polyfill
-# https://polyfill.io
-polyfill:
-    enable: true
-    features:
-        - default
-
 # Highlight.js
 # https://highlightjs.org
 highlight:

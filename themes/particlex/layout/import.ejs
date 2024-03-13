@@ -1,4 +1,6 @@
 <link rel="stylesheet" href="/css/loading.css" />
+<style id="loadingcss"> #loading { display: none; } </style>
+<script> document.getElementsByTagName('style')[1].disabled = true; </script>
 <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.3.7/vue.global.prod.min.js" integrity="sha512-QSkHACKsowYzL+sd0IEQd75O7nENqe+TR4CGnkLX7JOHvevIlJ3numBaGYRZLwf7FbYBygjtYqrYADYhTL4ioQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -6,9 +8,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500;600;700&amp;family=Lexend:wght@500;600;700&amp;family=Noto+Sans+SC:wght@600;700&amp;display=swap">
 <script> const mixins = {}; </script>
-<% if (theme.polyfill.enable) { %>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=<%- theme.polyfill.features %>"></script>
-<% } %>
 <% if (theme.highlight.enable) { %>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" integrity="sha512-D9gUyxqja7hBtkWpPWGt9wfbfaMGVt9gnyCvYa+jojwwPHLCzUm5i8rpk7vD7wNee9bA35eYIjobYPaQuKS1MQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js" integrity="sha512-axd5V66bnXpNVQzm1c7u1M614TVRXXtouyWCE+eMYl8ALK8ePJEs96Xtx7VVrPBc0UraCn63U1+ARFI3ofW+aA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
