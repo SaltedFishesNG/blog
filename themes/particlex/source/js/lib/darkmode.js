@@ -15,11 +15,14 @@ mixins.darkmode = {
             this.isDark = true;
             sessionStorage.setItem("isDrek", true);
             document.querySelector("#highlight-darkstyle").removeAttribute("disabled");
+            document.querySelector("#darkstyle").removeAttribute("disabled");
         },
         switchLight() {
             this.isDark = false;
             sessionStorage.setItem("isDrek", false);
             document.querySelector("#highlight-darkstyle").toggleAttribute("disabled");
+            document.querySelector("#darkstyle").toggleAttribute("disabled");
+            document.querySelector("#giscus-theme").toggleAttribute("disabled");
         },
         handleThemeSwitch() {
             if (this.isDark) {

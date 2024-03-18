@@ -912,7 +912,7 @@ ol li {
         padding-left: 20px;
     }
 }
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) and (scripting: none) {
     *,
     #home-card #card-div .friend-links a,
     #home-posts .post .category-and-date .category a{

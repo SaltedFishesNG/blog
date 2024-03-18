@@ -99,9 +99,10 @@ highlight:
     style: github
     darkstyle: github-dark
 
-# ThemeSwitchButton
-themeswitchbutton:
+# DarkMode
+darkmode:
     enable: true
+    themeswitchbutton: true
 
 # KaTeX math rendering
 math:

@@ -5,16 +5,6 @@ mixins.highlight = {
     created() {
         hljs.configure({ ignoreUnescapedHTML: true });
         this.renderers.push(this.highlight);
-        let darkModeQuery = window.matchMedia('(prefers-color-scheme: dark)');
-        let highlightDarkstyle = document.querySelector("#highlight-darkstyle");
-        if (darkModeQuery.matches) { highlightDarkstyle.toggleAttribute("disabled"); }
-        darkModeQuery.addEventListener('change', e => {
-            if (e.matches) {
-                highlightDarkstyle.removeAttribute("disabled");
-            } else {
-                highlightDarkstyle.toggleAttribute("disabled");
-            }
-        });
     },
     methods: {
         sleep(delay) {
