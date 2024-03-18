@@ -1,13 +1,3 @@
-let colorSchemeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-let highlightDarkstyle = document.querySelector("#highlight-darkstyle");
-if (colorSchemeMediaQuery.matches) { highlightDarkstyle.toggleAttribute("disabled"); }
-colorSchemeMediaQuery.addEventListener('change', e => {
-    if (e.matches) {
-        highlightDarkstyle.removeAttribute("disabled");
-    } else {
-        highlightDarkstyle.setAttribute("disabled", "");
-    }
-});
 mixins.highlight = {
     data() {
         return { copying: false };
@@ -15,6 +5,16 @@ mixins.highlight = {
     created() {
         hljs.configure({ ignoreUnescapedHTML: true });
         this.renderers.push(this.highlight);
+        let colorSchemeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+        let highlightDarkstyle = document.querySelector("#highlight-darkstyle");
+        if (colorSchemeMediaQuery.matches) { highlightDarkstyle.toggleAttribute("disabled"); }
+        colorSchemeMediaQuery.addEventListener('change', e => {
+            if (e.matches) {
+                highlightDarkstyle.removeAttribute("disabled");
+            } else {
+                highlightDarkstyle.setAttribute("disabled", "");
+            }
+        });
     },
     methods: {
         sleep(delay) {

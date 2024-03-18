@@ -39,10 +39,7 @@
                 <div class="cat__head"></div>
             </div>
         </div>
-        <script>
-            setTimeout((function () { document.getElementById("loading").style.display = "none"; }), 7e3);
-            if (typeof Proxy == 'undefined') { document.getElementById("loading").style.display = "none" }
-        </script>
+        <script> setTimeout((function () { document.getElementById("loading").style.display = "none"; }), 7e3); </script>
         <%- partial("menu") %>
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
             <%- partial(type) %>
