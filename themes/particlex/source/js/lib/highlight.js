@@ -5,14 +5,14 @@ mixins.highlight = {
     created() {
         hljs.configure({ ignoreUnescapedHTML: true });
         this.renderers.push(this.highlight);
-        let colorSchemeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+        let darkModeQuery = window.matchMedia('(prefers-color-scheme: dark)');
         let highlightDarkstyle = document.querySelector("#highlight-darkstyle");
-        if (colorSchemeMediaQuery.matches) { highlightDarkstyle.toggleAttribute("disabled"); }
-        colorSchemeMediaQuery.addEventListener('change', e => {
+        if (darkModeQuery.matches) { highlightDarkstyle.toggleAttribute("disabled"); }
+        darkModeQuery.addEventListener('change', e => {
             if (e.matches) {
                 highlightDarkstyle.removeAttribute("disabled");
             } else {
-                highlightDarkstyle.setAttribute("disabled", "");
+                highlightDarkstyle.toggleAttribute("disabled");
             }
         });
     },

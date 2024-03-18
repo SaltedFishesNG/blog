@@ -13,7 +13,7 @@
         <a
             @click="handleThemeSwitch"
             style="position: absolute; right: 20px; transform: scale(1.5)"
-        ><i :class="[dark ? 'fa-moon' : 'fa-sun', 'fa-solid', 'fa-fw']"></i></a>
+        ><i :class="[isDark ? 'fa-moon' : 'fa-sun', 'fa-solid', 'fa-fw']"></i></a>
         <% } %>
     </nav>
     <nav id="mobile-menu">
@@ -36,10 +36,10 @@
                 <% if (theme.themeswitchbutton.enable) { %>
                 <a class="item" @click="handleThemeSwitch">
                     <div style="min-width: 20px; max-width: 50px; width: 10%">
-                        <i :class="[dark ? 'fa-moon' : 'fa-sun', 'fa-solid', 'fa-fw']"></i>
+                        <i :class="[isDark ? 'fa-moon' : 'fa-sun', 'fa-solid', 'fa-fw']"></i>
                     </div>
                     <div style="min-width: 100px; max-width: 150%; width: 20%">
-                        {{ dark ? 'Dark' :'Light' }}
+                        {{ isDark ? 'Dark' :'Light' }}
                     </div>
                 </a>
                 <% } %>

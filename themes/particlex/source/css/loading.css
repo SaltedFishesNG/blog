@@ -115,3 +115,8 @@
 		width: 55%;
 	}
 }
+@media (scripting: none) {
+	#loading {
+		display: none;
+	}
+}

@@ -1,24 +1,31 @@
 mixins.darkmode = {
-    data() { return { dark: false }; },
+    data() { return { isDark: false }; },
     created() {
-        let colorSchemeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-        colorSchemeMediaQuery.addEventListener('change', e => {
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
             if (e.matches) {
-                this.dark = true;
+                this.switchDark();
             } else {
-                this.dark = false;
+                this.switchLight();
             }
         });
+        if (sessionStorage.getItem("isDrek")) { this.switchDark(); }
     },
     methods: {
+        switchDark() {
+            this.isDark = true;
+            sessionStorage.setItem("isDrek", true);
+            document.querySelector("#highlight-darkstyle").removeAttribute("disabled");
+        },
+        switchLight() {
+            this.isDark = false;
+            sessionStorage.setItem("isDrek", false);
+            document.querySelector("#highlight-darkstyle").toggleAttribute("disabled");
+        },
         handleThemeSwitch() {
-            this.dark = this.dark ? false : true;
-            if (this.dark) {
-                console.log("黑")
-                document.querySelector("#highlight-darkstyle").removeAttribute("disabled");
+            if (this.isDark) {
+                this.switchLight();
             } else {
-                console.log("光")
-                document.querySelector("#highlight-darkstyle").setAttribute("disabled", "");
+                this.switchDark();
             }
         },
     },
