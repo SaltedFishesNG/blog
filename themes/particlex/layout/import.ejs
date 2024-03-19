@@ -1,3 +1,9 @@
+<% if (theme.darkmode.enable) { %>
+    <script>
+        if ((!sessionStorage.getItem("NotFirstVisit") && window.matchMedia('(prefers-color-scheme: dark)').matches)
+            || sessionStorage.getItem("isDrek")) { document.documentElement.classList.add("dark"); }
+    </script>
+<% } %>
 <link rel="stylesheet" href="/css/loading.css" />
 <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.3.7/vue.global.prod.min.js" integrity="sha512-QSkHACKsowYzL+sd0IEQd75O7nENqe+TR4CGnkLX7JOHvevIlJ3numBaGYRZLwf7FbYBygjtYqrYADYhTL4ioQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

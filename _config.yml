@@ -117,7 +117,7 @@ filter_optimize:
       - css/main.css
       - css/loading.css
   js:
-    minify: true
+    minify: false
     excludes:
     remove_comments: false
   html:
@@ -137,25 +137,3 @@ html_minifier:
     removeStyleLinkTypeAttributes: true
     minifyJS: true
     minifyCSS: true
-
-# offline config passed to sw-precache.
-service_worker:
-  maximumFileSizeToCacheInBytes: 1048576
-  staticFileGlobs:
-  - public/**/*.{js,html,css}
-  - public/**/*.{eot,ttf,woff,woff2}
-  - public/**/*.{png,webp,ico,gif,svg}
-#  - pbulic/**/*.{jpg}
-  stripPrefix: public
-  verbose: true
-  service_worker:
-  runtimeCaching:
-    - urlPattern: /*
-      handler: cacheFirst
-      options:
-        origin: cdnjs.cloudflare.com
-    - urlPattern: /*
-      handler: cacheFirst
-      options:
-        origin: fonts.googleapis.com
-

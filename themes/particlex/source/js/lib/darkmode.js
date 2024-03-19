@@ -1,14 +1,14 @@
 mixins.darkmode = {
     data() { return { isDark: false }; },
     created() {
-        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-            if (e.matches) {
-                this.switchDark();
-            } else {
-                this.switchLight();
-            }
+        let colorTheme = window.matchMedia('(prefers-color-scheme: dark)');
+        if (!sessionStorage.getItem("NotFirstVisit") && colorTheme.matches) {
+            this.switchDark(); sessionStorage.setItem("NotFirstVisit", true);
+        } else { sessionStorage.setItem("NotFirstVisit", true); }
+        sessionStorage.getItem("isDrek") ? this.switchDark() : this.switchLight();
+        colorTheme.addEventListener('change', e => {
+            e.matches ? this.switchDark() : this.switchLight();
         });
-        if (sessionStorage.getItem("isDrek")) { this.switchDark(); }
     },
     methods: {
         switchDark() {
@@ -16,20 +16,15 @@ mixins.darkmode = {
             sessionStorage.setItem("isDrek", true);
             document.querySelector("#highlight-darkstyle").removeAttribute("disabled");
             document.querySelector("#darkstyle").removeAttribute("disabled");
+            document.documentElement.classList.add("dark");
         },
         switchLight() {
             this.isDark = false;
-            sessionStorage.setItem("isDrek", false);
-            document.querySelector("#highlight-darkstyle").toggleAttribute("disabled");
-            document.querySelector("#darkstyle").toggleAttribute("disabled");
-            document.querySelector("#giscus-theme").toggleAttribute("disabled");
+            sessionStorage.removeItem("isDrek");
+            document.querySelector("#highlight-darkstyle").setAttribute("disabled", "");
+            document.querySelector("#darkstyle").setAttribute("disabled", "");
+            document.documentElement.classList.remove("dark");
         },
-        handleThemeSwitch() {
-            if (this.isDark) {
-                this.switchLight();
-            } else {
-                this.switchDark();
-            }
-        },
+        handleThemeSwitch() { this.isDark ? this.switchLight() : this.switchDark(); },
     },
 };
