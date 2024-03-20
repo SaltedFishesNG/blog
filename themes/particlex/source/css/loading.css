@@ -21,7 +21,7 @@
 .cat__head::before{
 	background: var(--background-color);
 }
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) and (scripting: none) {
 	#loading,
 	.cat__head::before {
 		background: #181a1b;

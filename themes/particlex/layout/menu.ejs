@@ -12,7 +12,7 @@
         <% if (theme.darkmode.themeswitchbutton) { %>
         <i
             @click="handleThemeSwitch"
-            style="position: absolute; right: 20px; transform: scale(1.5) translate(-50%, 85%);"
+            style="position: absolute; right: 20px; transform: scale(1.5) translate(-50%, 85%); @media (scripting: none) {display: none;}"
             :class="[isDark ? 'fa-moon' : 'fa-sun', 'fa-solid', 'fa-fw']"
         ></i>
         <% } %>
@@ -26,7 +26,7 @@
             <div class="items" v-show="showMenuItems" style="display: none;">
                 <% Object.entries(theme.menu).forEach(([key, value]) => { %>
                 <a href="<%- url_for(value.link) %>">
-                    <div class="item">
+                    <div class="item" style="@media (scripting: none) {display: none;}">
                         <div style="min-width: 20px; max-width: 50px; width: 10%">
                             <i class="fa-<%- value.theme %> fa-<%- value.name %> fa-fw"></i>
                         </div>
