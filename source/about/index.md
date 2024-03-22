@@ -27,7 +27,7 @@ layout: About
 * nyaa~~
 * 或许这个人拥有顶级社恐(?)，但是.....
 * 比较喜欢Minecraft(java版档案名称：SaltedFishes).
-* 通常只会听本地音乐(一般使用`poweramp`和`foobar2000`).
+* 通常只会听本地音乐.
 * 有时很孤单，经常沉浸在自己的妄想之中.
 * 很多时候与他人交流时非常喜欢迎合别人.
 * 非常喜欢Visual Novel.
