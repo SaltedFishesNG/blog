@@ -41,6 +41,7 @@ layout: About
 | 站点 | 账号 |
 | :--------  | :----- |
 | Mail | [main@saltedfishes.com](mailto:main@saltedfishes.com) |
+| Facebook | [@SaltedFishesNG](https://www.facebook.com/SaltedFishesNG/) |
 | Twitter | [@SaltedFishesNG](https://twitter.com/SaltedFishesNG) |
 | GitHub | [SaltedFishesNG](https://github.com/SaltedFishesNG/) |
 
