@@ -69,8 +69,12 @@ card:
             name: envelope
             theme: solid
             link: mailto:main@saltedfishes.com
+        Facebook:
+            name: facebook
+            theme: brands
+            link: https://www.facebook.com/SaltedFishesNG/
         Twitter:
-            name: twitter
+            name: x-twitter
             theme: brands
             link: https://twitter.com/SaltedFishesNG
         GitHub:
