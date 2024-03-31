@@ -65,4 +65,3 @@ Fingerprint = 0F36 59EA C920 7CE3 B0D7 C5AB A4CA 90D3 26E9 FB7C
 ## 以及.....
 
 * [SaltedFishes's OneDrive](https://cloud.saltedfishes.com/)
-* [SaltedFishes's Box](https://alist.saltedfishes.com/)

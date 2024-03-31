@@ -124,5 +124,3 @@ Add-AppPackage -Path "这里填写安装包的名称和路径" -AllowUnsigned
 以及......我的网盘中存在一些我个人已经封装好的（推荐使用PowerShell安装）
 
 > https://cloud.saltedfishes.com/zh-CN/UWP/
-
-> https://alist.saltedfishes.com/E5-Main/UWP/

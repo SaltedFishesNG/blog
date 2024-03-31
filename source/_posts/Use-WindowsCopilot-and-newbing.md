@@ -53,7 +53,7 @@ comments: true
 或者是使用 win + c 键来打开它。
 
 如果你仍未解决此问题，请手动安装kb5027397启用包，以启用Windows Copilot。
-下载kb5027397启用包: [点击这里](https://cloud.saltedfishes.com/zh-CN/杂物/启用WindowsCopilot) 或者 [点击这里](https://alist.saltedfishes.com/E5-Main/杂物/启用WindowsCopilot)
+下载kb5027397启用包: [点击这里](https://cloud.saltedfishes.com/zh-CN/杂物/启用WindowsCopilot)
 
 ## 0x04 注意事项
 
