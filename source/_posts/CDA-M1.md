@@ -4,7 +4,7 @@ tag:
   - 救砖
 categories: 救砖
 excerpt: 个人的Colorfly CDA M1救砖经历而已<br>所需救砖文件： <code>https://cloud.saltedfishes.com/zh-CN/杂物/七彩虹M1救砖工具/</code>
-updated: 2023-06-06
+date: 2023-06-06
 # pinned:
 comments: true
 # secret: ""
