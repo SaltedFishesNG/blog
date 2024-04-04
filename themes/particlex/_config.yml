@@ -6,6 +6,7 @@ avatar: ./images/avatar.webp
 
 # Home page background image
 background:
+    - ./images/background/-1.webp
     - ./images/background/0.jpg
     - ./images/background/1.webp
     - ./images/background/2.webp
@@ -22,13 +23,6 @@ background:
     - ./images/background/13.webp
     - ./images/background/14.webp
     - ./images/background/15.webp
-    - ./images/background/16.webp
-    - ./images/background/17.webp
-    - ./images/background/18.webp
-    - ./images/background/19.webp
-    - ./images/background/20.webp
-    - ./images/background/21.webp
-    - ./images/background/22.webp
 
 # Optional colors for category and tag
 colors:
