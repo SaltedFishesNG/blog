@@ -6,24 +6,29 @@ avatar: ./images/avatar.webp
 
 # Home page background image
 background:
-    - ./images/background/1.jpg
-    - ./images/background/2.jpg
-    - ./images/background/3.jpg
-    - ./images/background/4.jpg
-    - ./images/background/5.jpg
-    - ./images/background/6.jpg
-    - ./images/background/7.jpg
-    - ./images/background/8.jpg
-    - ./images/background/9.jpg
-    - ./images/background/10.jpg
-    - ./images/background/11.jpg
-    - ./images/background/12.jpg
-    - ./images/background/13.jpg
-    - ./images/background/14.jpg
-    - ./images/background/15.jpg
-    - ./images/background/16.jpg
-    - ./images/background/17.jpg
-    - ./images/background/18.jpg
+    - ./images/background/0.jpg
+    - ./images/background/1.webp
+    - ./images/background/2.webp
+    - ./images/background/3.webp
+    - ./images/background/4.webp
+    - ./images/background/5.webp
+    - ./images/background/6.webp
+    - ./images/background/7.webp
+    - ./images/background/8.webp
+    - ./images/background/9.webp
+    - ./images/background/10.webp
+    - ./images/background/11.webp
+    - ./images/background/12.webp
+    - ./images/background/13.webp
+    - ./images/background/14.webp
+    - ./images/background/15.webp
+    - ./images/background/16.webp
+    - ./images/background/17.webp
+    - ./images/background/18.webp
+    - ./images/background/19.webp
+    - ./images/background/20.webp
+    - ./images/background/21.webp
+    - ./images/background/22.webp
 
 # Optional colors for category and tag
 colors:
@@ -65,7 +70,7 @@ card:
     description: |
         「尽己所能见证一切有趣之事」
     iconLinks:
-        mail:
+        Email:
             name: envelope
             theme: solid
             link: mailto:main@saltedfishes.com
@@ -73,10 +78,18 @@ card:
             name: facebook
             theme: brands
             link: https://www.facebook.com/SaltedFishesNG/
+        Steam:
+            name: steam
+            theme: brands
+            link: https://steamcommunity.com/id/SaltedFishesNG/
         Twitter:
             name: x-twitter
             theme: brands
             link: https://twitter.com/SaltedFishesNG
+        Discord:
+            name: discord
+            theme: brands
+            link: https://discord.com/users/814807934080253993
         GitHub:
             name: github
             theme: brands
@@ -85,7 +98,6 @@ card:
         残叩: https://rbq.lu/
         SNESITE: https://snes.site/
         365cent: https://mx.sb/
-        Argvchs: https://argvchs.github.io/
 
 # Footer info
 footer:

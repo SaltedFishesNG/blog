@@ -43,10 +43,10 @@ blockquote{
     border-left: 3px solid #c1c1c1;
 }
 table:not(.hljs-ln) td:nth-child(even) {
-    background: #2b3133;
+    background: #303739;
 }
 table:not(.hljs-ln) td:nth-child(odd) {
-    background: #8087928d;
+    background: #384145;
 }
 table:not(.hljs-ln) th {
     background: #206b97;
