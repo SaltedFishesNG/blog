@@ -72,14 +72,6 @@ card:
             name: facebook
             theme: brands
             link: https://www.facebook.com/SaltedFishesNG/
-        Steam:
-            name: steam
-            theme: brands
-            link: https://steamcommunity.com/id/SaltedFishesNG/
-        Twitter:
-            name: x-twitter
-            theme: brands
-            link: https://twitter.com/SaltedFishesNG
         Discord:
             name: discord
             theme: brands

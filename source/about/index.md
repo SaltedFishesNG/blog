@@ -41,8 +41,6 @@ layout: About
 | :--------  | :----- |
 | Email | [main@saltedfishes.com](mailto:main@saltedfishes.com) |
 | Facebook | [@SaltedFishesNG](https://www.facebook.com/SaltedFishesNG/) |
-| Steam | [SaltedFishes](https://steamcommunity.com/id/SaltedFishesNG/) |
-| Twitter | [@SaltedFishesNG](https://twitter.com/SaltedFishesNG) |
 | Discord | [saltedfishesng](https://discord.com/users/814807934080253993) |
 | GitHub | [SaltedFishesNG](https://github.com/SaltedFishesNG) |
 
