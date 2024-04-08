@@ -21,8 +21,8 @@ dependencies:
     specifier: ^2.0.0
     version: 2.0.0
   hexo-helper-crypto:
-    specifier: ^1.1.5
-    version: 1.1.5
+    specifier: ^1.1.6
+    version: 1.1.6
   hexo-html-minifier:
     specifier: ^1.0.0
     version: 1.0.0
@@ -718,8 +718,8 @@ packages:
       hexo-pagination: 3.0.0
     dev: false
 
-  /hexo-helper-crypto@1.1.5:
-    resolution: {integrity: sha512-KfrpsBv5SoMLNXVtGjPklyFaHP3Jb0SdALSRyhkJ1TFFIl95dH2Pa6M4Dam5xNDo44fmLrEzm/VHrM5AXJMFEA==}
+  /hexo-helper-crypto@1.1.6:
+    resolution: {integrity: sha512-KZWblv1WQZ2caVo92pqrkY2T+p7RXpBrVK1QJcNKGul/dkK7pPOWVGMtp1meGZ3+XVEuRaC47sGyYA10LuD7Qw==}
     dependencies:
       crypto-js: 4.2.0
     dev: false
