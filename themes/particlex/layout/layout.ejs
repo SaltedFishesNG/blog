@@ -41,7 +41,6 @@
         </div>
         <script>
             if (typeof Proxy == 'undefined') { document.getElementById("loading").style.display = "none"; }
-            setTimeout((function () { document.getElementById("loading").style.display = "none"; }), 7e3);
         </script>
         <%- partial("menu") %>
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
@@ -50,7 +49,7 @@
         </div>
         <% if (theme.preview.enable) { %>
         <transition name="fade">
-            <div id="preview" ref="preview" v-show="previewShow" style="display: none;">
+            <div id="preview" ref="preview" v-show="previewShow">
                 <img id="preview-content" ref="previewContent" />
             </div>
         </transition>

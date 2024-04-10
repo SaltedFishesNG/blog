@@ -12,7 +12,7 @@
         <% if (theme.darkmode.themeswitchbutton) { %>
         <i
             @click="handleThemeSwitch"
-            style="position: absolute; right: 20px; transform: scale(1.5) translate(-50%, 85%); @media (scripting: none) {display: none;}"
+            style="position: absolute; right: 20px; transform: scale(1.5) translate(-50%, 85%);"
             :class="[isDark ? 'fa-moon' : 'fa-sun', 'fa-solid', 'fa-fw']"
         ></i>
         <% } %>
@@ -23,10 +23,10 @@
             <span>&emsp;<%= config.title.toUpperCase() %></span>
         </div>
         <transition name="slide">
-            <div class="items" v-show="showMenuItems" style="display: none;">
+            <div class="items" v-show="showMenuItems">
                 <% Object.entries(theme.menu).forEach(([key, value]) => { %>
                 <a href="<%- url_for(value.link) %>">
-                    <div class="item" style="@media (scripting: none) {display: none;}">
+                    <div class="item">
                         <div style="min-width: 20px; max-width: 50px; width: 10%">
                             <i class="fa-<%- value.theme %> fa-<%- value.name %> fa-fw"></i>
                         </div>
@@ -49,5 +49,5 @@
     </nav>
 </div>
 <transition name="fade">
-    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems" style="display: none;"></div>
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
 </transition>
