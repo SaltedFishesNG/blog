@@ -55,7 +55,7 @@ Fingerprint = 0F36 59EA C920 7CE3 B0D7 C5AB A4CA 90D3 26E9 FB7C
 
 * 本站使用的第一个域名注册于 2022-10-17（中途更换过一次域名）。
 * <details><summary><del>2022年那一年我用域名干什么了？</del></summary>
-<blockquote>实际上来说.......最初是为了用于<a target="_blank" rel="noopener" href="https://cloud.saltedfishes.com/">我的OneDrive盘</a>的，后来一时兴起写的博客......结果到2023年才具体水出了文章.........
+<blockquote style="padding-bottom: 15px; padding-left: 20px; padding-top: 15px;">实际上来说.......最初是为了用于<a target="_blank" rel="noopener" href="https://cloud.saltedfishes.com/">我的OneDrive盘</a>的，后来一时兴起写的博客......结果到2023年才具体水出了文章.........
 </blockquote></details>
 * 我只实际使用了`saltedfishes.com`这一个域名，我目前并没有实际使用其他域名 ~(一定是因为我太穷了)~。
 * 本站所有内容不会在其他任何地方发布，如果你见到我写的东西出现在其他地方，那么肯定是别人搬运的。
