@@ -4,13 +4,31 @@
     display: none;
 }
 pre code {
-    background-color: white;
-    display: block;
+    background-color: #fff;
     white-space: pre;
+    display: block;
     overflow-x: scroll;
     padding-bottom: 15px;
     padding-left: 20px;
-    padding-top: 15px;
+    line-height: 26px;
+    margin-left: 0px;
+    padding-top: 45px;
+}
+
+pre code::after {
+    content: attr(class);
+    background: linear-gradient(to right, #ed6ea0 0%, #ec8c69 100%);
+    border-radius: 0 0 10px 10px;
+    box-shadow: 1px 1px 0.75rem #ed6ea14d;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    left: 30px;
+    padding: 10px 15px;
+    position: absolute;
+    top: 0;
+    line-height: normal;
+    user-select: none;
 }
 #loading {
     animation-duration: 1s;

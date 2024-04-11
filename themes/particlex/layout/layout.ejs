@@ -40,7 +40,13 @@
             </div>
         </div>
         <script>
-            if (typeof Proxy == 'undefined') { document.getElementById("loading").style.display = "none"; }
+            var link;
+            "undefined" == typeof Proxy && (
+                document.getElementById("loading").style.display = "none",
+                (link = document.createElement("link")).rel = "stylesheet",
+                link.href = "/css/noscript.css",
+                document.getElementsByTagName("head")[0].appendChild(link)
+            )
         </script>
         <%- partial("menu") %>
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
