@@ -14,16 +14,20 @@ mixins.darkmode = {
         switchDark() {
             this.isDark = true;
             sessionStorage.setItem("isDrek", true);
-            document.querySelector("#highlight-darkstyle").removeAttribute("disabled");
-            document.querySelector("#darkstyle").removeAttribute("disabled");
             document.documentElement.classList.add("dark");
+            document.querySelector("#darkstyle").removeAttribute("disabled");
+            try {
+                document.querySelector("#highlight-darkstyle").removeAttribute("disabled");
+            } catch { }
         },
         switchLight() {
             this.isDark = false;
             sessionStorage.removeItem("isDrek");
-            document.querySelector("#highlight-darkstyle").setAttribute("disabled", "");
-            document.querySelector("#darkstyle").setAttribute("disabled", "");
             document.documentElement.classList.remove("dark");
+            document.querySelector("#darkstyle").setAttribute("disabled", "");
+            try {
+                document.querySelector("#highlight-darkstyle").setAttribute("disabled", "");
+            } catch { }
         },
         handleThemeSwitch() { this.isDark ? this.switchLight() : this.switchDark(); },
     },
