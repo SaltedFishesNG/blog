@@ -1,0 +1,50 @@
+<div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="<%- config.root %>">
+            <span><%= config.title.toUpperCase() %></span>
+        </a>
+        <% Object.entries(theme.menu).forEach(([key, value]) => { %>
+        <a href="<%- url_for(value.link) %>">
+            <i class="fa-<%- value.theme %> fa-<%- value.name %> fa-fw"></i>
+            <span>&ensp;<%= key %></span>
+        </a>
+        <% }); %>
+        <% if (theme.darkmode.themeswitchbutton) { %>
+        <i
+            @click="handleThemeSwitch"
+            style="position: absolute; right: 20px; transform: scale(1.5) translate(-50%, 85%);"
+            :class="[isDark ? 'fa-moon' : 'fa-sun', 'fa-solid', 'fa-fw']"
+        ></i>
+        <% } %>
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;<%= config.title.toUpperCase() %></span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                <% Object.entries(theme.menu).forEach(([key, value]) => { %>
+                <a href="<%- url_for(value.link) %>">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-<%- value.theme %> fa-<%- value.name %> fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%"><%= key %></div>
+                    </div>
+                </a>
+                <% }); %>
+                <% if (theme.darkmode.themeswitchbutton) { %>
+                <div class="item" @click="handleThemeSwitch">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i :class="[isDark ? 'fa-moon' : 'fa-sun', 'fa-solid', 'fa-fw']"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">
+                        {{ isDark ? 'Dark' :'Light' }}
+                    </div>
+                </div>
+                <% } %>
+            </div>
+        </transition>
+    </nav>
+</div>

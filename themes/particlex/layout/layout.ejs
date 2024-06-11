@@ -1,0 +1,66 @@
+<%
+    let type;
+    if (is_home()) type = "index";
+    if (is_post() || is_page()) type = "post";
+    if (is_category() || page.type === "categories") type = "categories";
+    if (is_tag() || page.type === "tags") type = "tags";
+    if (page.type === "friends") type = "friends";
+    if (is_archive()) type = "archives";
+    let title;
+    if (is_home()) title = config.title;
+    if (is_post() || is_page()) title = page.title + " | " + config.title;
+    if (is_archive()) title = "Archives | " + config.title;
+%>
+<!DOCTYPE html>
+<html lang="<%- config.language %>">
+<head>
+    <meta charset="utf-8" />
+    <title><%= title %></title>
+    <meta name="author" content="<%- config.author %>" />
+    <meta name="description" content="<%- config.description %>" />
+    <meta name="keywords" content="<%- config.keywords %>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#92cafa" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" href="/images/favicon.png" sizes="512x512">
+    <link rel="icon" type="image/webp" href="/images/favicon.webp" sizes="2048x2048">
+    <%- partial("import", { type }) %>
+</head>
+<body>
+    <div id="layout">
+        <div id="loading" v-show="loading">
+            <div class="cat">
+                <div class="cat__body"></div>
+                <div class="cat__body"></div>
+                <div class="cat__tail"></div>
+                <div class="cat__head"></div>
+            </div>
+        </div>
+        <script>
+            var link;
+            "undefined" == typeof Proxy && (
+                document.getElementById("loading").style.display = "none",
+                (link = document.createElement("link")).rel = "stylesheet",
+                link.href = "/css/noscript.css",
+                document.getElementsByTagName("head")[0].appendChild(link)
+            )
+        </script>
+        <%- partial("menu") %>
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <%- partial(type) %>
+            <%- partial("footer") %>
+        </div>
+        <% if (theme.preview.enable) { %>
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        <% } %>
+    </div>
+    <script src="./js/main.js"></script>
+    <% if (page.comments) { %>
+    <%- partial("comment") %>
+    <% } %>
+</body>
+</html>

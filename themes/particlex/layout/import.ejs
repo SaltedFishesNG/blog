@@ -1,0 +1,67 @@
+<% if (theme.darkmode.enable) { %>
+    <script>
+    if (sessionStorage.getItem("isDrek")
+        || (!sessionStorage.getItem("NotFirstVisit") 
+        && window.matchMedia('(prefers-color-scheme: dark)').matches)
+    ) {
+        document.documentElement.classList.add("dark");
+        document.querySelector('meta[name="theme-color"]').setAttribute('content', '#054072');
+    }
+    </script>
+<% } %>
+<link rel="stylesheet" href="/css/loading.css" />
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.3.7/vue.global.prod.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&amp;family=Lexend:wght@600;700&amp;family=Noto+Sans+SC:wght@600&amp;display=swap">
+<script> const mixins = {}; </script>
+<% if (theme.highlight.enable) { %>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/<%- theme.highlight.style %>.min.css" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" id="highlight-darkstyle" disabled href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/<%- theme.highlight.darkstyle %>.min.css"/>
+    <script src="./js/lib/highlight.js"></script>
+<% } %>
+<% if (theme.math.enable) { %>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="./js/lib/math.js"></script>
+<% } %>
+<% if (theme.preview.enable) { %>
+    <script src="./js/lib/preview.js"></script>
+<% } %>
+<% if (theme.crypto.enable && typeof page.secret !== "undefined") { %>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./js/lib/crypto.js"></script>
+<% } %>
+<% if (type === "archives" && theme.search.enable) { %>
+    <script src="./js/lib/search.js"></script>
+<% } %>
+<% if (type === "index") { %>
+    <script src="./js/lib/home.js"></script>
+<% } %>
+<% if (page.comments) { %>
+    <% if (theme.gitalk.enable) { %>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.css" referrerpolicy="no-referrer" />
+    <% } %>
+    <% if (theme.waline.enable) { %>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/waline/2.15.8/waline.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/waline/2.15.8/waline.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/waline/2.15.8/waline-meta.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <% } %>
+    <% if (theme.twikoo.enable) { %>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twikoo/1.6.22/twikoo.all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <% } %>
+<% } %>
+<link rel="stylesheet" href="./css/main.css" />
+<% if (theme.darkmode.enable) { %>
+    <link rel="stylesheet" id="darkstyle" disabled href="./css/dark.css" />
+    <script src="./js/lib/darkmode.js"></script>
+<% } %>
+<noscript>
+    <link rel="stylesheet" href="./css/noscript.css" />
+</noscript>
