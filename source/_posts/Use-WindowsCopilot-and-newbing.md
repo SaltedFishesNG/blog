@@ -12,7 +12,7 @@ comments: true
 # secret: ""
 ---
 
-## 0x01 先决条件
+## 0x01.先决条件
 
 首先需要保证您的Edge浏览器以及Windows系统一定是最新版。
 在这里我使用了 `Edge 117.0.2045.43 (正式版本) (64 位)` 和 `Windows11 22H2 22631.2361`。如图：
@@ -23,7 +23,7 @@ comments: true
 
 以及您需要保证您的网络环境可以使用Windows Copilot，您可以在网络代理软件中使用全局代理。
 
-## 0x02 确保可以正常使用Bing AI
+## 0x02.确保可以正常使用Bing AI
 
 如果您无法使用Bing AI的话，那么您大概率是无法使用Windows Copilot的，因为本质上Windows Copilot就是Bing AI换皮。
 
@@ -47,7 +47,7 @@ comments: true
 
 如果你在InPrivate窗口中仍然无法使用Bing AI，那么代表你网络环境有问题，请尝试使用或更换代理。
 
-## 0x03 使用Windows Copilot
+## 0x03.使用Windows Copilot
 
 此时您应是满足了使用Windows Copilot的条件，您可以尝试重启电脑，此时应该可以在 `设置` -  `个性化` - `任务栏` - `任务栏项` 中看到Copilot的按钮开关了。
 或者是使用 win + c 键来打开它。
@@ -55,7 +55,7 @@ comments: true
 如果你仍未解决此问题，请手动安装kb5027397启用包，以启用Windows Copilot。
 下载kb5027397启用包: [点击这里](https://cloud.saltedfishes.com/Other/启用WindowsCopilot)
 
-## 0x04 注意事项
+## 0x04.注意事项
 
 * Windows Copilot与Edge浏览器相绑定，所以，如果给Edge配置代理，同时也会应用到Windows Copilot上。
 其实本质上Windows Copilot就是Bing AI.......
