@@ -1,6 +1,6 @@
-#menu-curtain,
 #preview,
-.items {
+.items,
+#loading {
     display: none;
 }
 pre code {
@@ -14,7 +14,6 @@ pre code {
     margin-left: 0px;
     padding-top: 45px;
 }
-
 pre code::after {
     content: attr(class);
     background: linear-gradient(to right, #ed6ea0 0%, #ec8c69 100%);
@@ -30,24 +29,21 @@ pre code::after {
     line-height: normal;
     user-select: none;
 }
-#loading {
-    animation-duration: 1s;
-    animation-name: hideloading;
-    animation-fill-mode : forwards
+@media (max-width: 900px) {
+    #menu #mobile-menu,
+    #menu #desktop-menu i,
+    #menu #desktop-menu a span {
+        display: none;
+    }
+    #menu #desktop-menu,
+    #menu #desktop-menu a i,
+    #menu #desktop-menu .title span{
+        display: inline;
+        margin-left: 0px;
+    }
 }
-@keyframes hideloading {
-    85% {
-        opacity: 1;
-    }
-    99%{
-        width: 100vw;
-        height: 100vh;
-    }
-    100% {
-        width: 0vw;
-        height: 0vh;
-        opacity: 0;
-    }
+@media (max-width: 550px) {
+    #menu #desktop-menu .title span {display: none}
 }
 @media (prefers-color-scheme: dark) {
     *,

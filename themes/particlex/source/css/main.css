@@ -381,15 +381,6 @@
     cursor: pointer;
     z-index: 1003;
 }
-#menu-curtain {
-    background: #0003;
-    height: 100%;
-    left: 0;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1001;
-}
 #menu.hidden {
     top: -50px;
 }
