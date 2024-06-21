@@ -21,6 +21,12 @@
 .cat__head::before{
 	background: var(--background-color);
 }
+@media (prefers-color-scheme: dark) {
+	#loading,
+	.cat__head::before {
+		background: #181a1b;
+	}
+}
 .cat {
 	position: relative;
 	width: 100%;

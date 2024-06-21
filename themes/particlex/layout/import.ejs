@@ -1,9 +1,6 @@
 <% if (theme.darkmode.enable) { %>
     <script>
-    if (sessionStorage.getItem("isDrek")
-        || (!sessionStorage.getItem("NotFirstVisit") 
-        && window.matchMedia('(prefers-color-scheme: dark)').matches)
-    ) {
+    if (sessionStorage.getItem("isDrek")) {
         document.documentElement.classList.add("dark");
         document.querySelector('meta[name="theme-color"]').setAttribute('content', '#054072');
     }
@@ -13,10 +10,10 @@
 <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.3.7/vue.global.prod.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&amp;family=Lexend:wght@600;700&amp;family=Noto+Sans+SC:wght@600&amp;display=swap">
-<script> const mixins = {}; </script>
+<link rel="preconnect" href="https://fonts.googleapis.cn">
+<link rel="preconnect" href="https://fonts.gstatic.cn" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.cn/css2?family=Lexend:wght@600;700&amp;family=Fira+Code:wght@500&amp;family=Noto+Sans+SC:wght@500&amp;display=swap">
+<script>const mixins = {};</script>
 <% if (theme.highlight.enable) { %>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -62,6 +59,4 @@
     <link rel="stylesheet" id="darkstyle" disabled href="./css/dark.css" />
     <script src="./js/lib/darkmode.js"></script>
 <% } %>
-<noscript>
-    <link rel="stylesheet" href="./css/noscript.css" />
-</noscript>
+<noscript><link rel="stylesheet" href="./css/noscript.css" /></noscript>
