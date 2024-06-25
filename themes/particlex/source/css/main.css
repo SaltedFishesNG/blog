@@ -764,7 +764,7 @@ ol li {
         transform: rotate(480deg);
     }
 }
-@media (min-width: 900px) {
+@media (min-width: 975px) {
     #home-head #home-info .info .wrap {
         padding: 25px;
     }
@@ -828,19 +828,7 @@ ol li {
         padding-left: 40px;
     }
 }
-@media (min-width: 900px) and (max-width: 1200px) {
-    #home-card {
-        display: none;
-    }
-    #home-posts {
-        width: 100%;
-    }
-    #home-posts-wrap,
-    #archives {
-        width: 800px;
-    }
-}
-@media (max-width: 900px) {
+@media (max-width: 975px) {
     #home-head #home-info {
         height: 350px;
         width: 350px;
