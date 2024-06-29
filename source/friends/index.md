@@ -6,15 +6,15 @@ links:
   - title: 残叩
     desc: 你好，我是残叩！
     link: https://rbq.lu/
-    icon: https://avatars.githubusercontent.com/u/47906112?v=4
+    icon: https://avatars.githubusercontent.com/u/47906112
   - title: Funeral Rain’s Blog
     desc: …Just a chaotic doom
     link: https://toya.moe/
     icon: https://toya.moe/toya.webp
   - title: SNESITE
-    desc: 
-    link: https://github.com/snesqwq
-    icon: https://avatars.githubusercontent.com/u/137132995?v=4
+    desc: LAGSNES 的个人博客
+    link: https://lagsn.es/
+    icon: https://avatars.githubusercontent.com/u/162039573
   - title: 365cent
     desc: Nothing Creative
     link: https://mx.sb/
