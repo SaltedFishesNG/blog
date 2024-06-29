@@ -74,20 +74,20 @@ card:
         「尽己所能见证一切有趣之事」
     iconLinks:
         Email:
-            name: envelope
-            theme: solid
+            class: fa-solid fa-envelope fa-fw
             link: mailto:main@saltedfishes.com
+        Matrix:
+            class: fa-fw
+            style: content:url(../images/Matrix_icon.svg);
+            link: https://matrix.to/#/@kazamatasaya:mozilla.org
         Discord:
-            name: discord
-            theme: brands
+            class: fa-brands fa-discord fa-fw
             link: https://discord.com/users/814807934080253993
         Facebook:
-            name: facebook
-            theme: brands
+            class: fa-brands fa-facebook fa-fw
             link: https://www.facebook.com/profile.php?id=61556768945695
         GitHub:
-            name: github
-            theme: brands
+            class: fa-brands fa-github  fa-fw
             link: https://github.com/SaltedFishesNG/
     friendLinks:
         残叩: https://rbq.lu/
