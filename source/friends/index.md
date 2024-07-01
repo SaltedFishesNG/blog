@@ -14,7 +14,7 @@ links:
   - title: SNESITE
     desc: LAGSNES 的个人博客
     link: https://lagsn.es/
-    icon: https://avatars.githubusercontent.com/u/162039573
+    icon: https://avatars.githubusercontent.com/u/174269204
   - title: 365cent
     desc: Nothing Creative
     link: https://mx.sb/
@@ -32,7 +32,7 @@ links:
     *  包含大量[广告](https://zh.m.wikipedia.org/zh-cn/广告)的
     *  充斥着各种采集、[洗稿](https://zh.m.wikipedia.org/wiki/洗稿)的内容，几乎没有原创的
     *  包含大量[争议性内容](https://zh.m.wikipedia.org/wiki/Wikipedia:争议性陈述)的
-* 请尽可能确保友链是双向的。
+* 请尽可能确保友链是双向的（非必须，视情况我也会保持单方面友链）。
 * 以上基本要求最终解释权归SaltedFishes所有 ~
 
 ### 02.所需
